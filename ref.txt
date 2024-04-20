@@ -1,0 +1,50 @@
+Removes all parsers from this text area
+Assigns the specified id to the labelMap according to its label
+Loading bitmap with optimized loaded size less than specific pixels count
+Returns a hash code value for this object
+Saves the configuration file
+Greater than or equal comparison
+Builds a union coder with the given list of element coders.  This list corresponds to a mapping of union tag to Coder. Union tags start at 0
+Evaluates if the Dependency is targeted for a classpath type
+Initialize the Activity data
+Checks if the given storage port is part of VArray
+Start SendGroupFile activity
+Sets the list of excluded data centers
+Methods converts a decimal number into a binary number as a string
+Returns the length of the integer codon representation of this grammar
+Creates a new instance
+Creates an audio media that can be played in the background
+Construct a default CacheLayer
+Build an Android Address object from the Gisgraphy address in JSON format
+Creates a new dataset with the given database connection, and executes the supplied query to populate the dataset
+Return an iterator over the filter's data types
+Construct a general URI from the given components
+Add a user
+Construct and return a Video object with a rnadom name, url, and duration
+Adds a new contact postal address
+Constructs a CaughtExceptionRef() grammar chunk
+Generate an explicit null check (compare to zero)
+Creates a new composite issue processor with the given sub processor arguments
+Apply a visitor to a field
+Creates a Project Closed Event
+Returns an enumeration of the values in this table
+Returns the segment for the given index
+Parses a 32-bit int
+Generate name that consists of some event information
+Initializes the batch signer with the given actor system
+Creates a new Random Decision Tree
+Annotate the difference between previous balance and actual from cash scrutiny in the cash book
+Returns if the given compute description is a compute host or not
+Copies from a file to an output stream
+Gets last generated local ID
+Put the page in the cache
+Removes an instruction edge from the instruction graph
+Checks if the parameter path a valid for saving fixed file
+This method will add a new dictionary chunk to existing list of dictionary chunks
+Perform inverse DCT on the 8x8 matrix
+Creates new ProductionRule
+Sets the type of the document to fetch
+Read a single sentence
+Tests whether this selector matches the given element
+Checks whether the given class implements the given interface
+Adds the given value to the dataset

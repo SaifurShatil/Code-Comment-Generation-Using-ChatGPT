@@ -1,0 +1,176 @@
+1. {"code": "public void clearParsers(){\n  if (parserManager != null) {\n    parserManager.clearParsers();\n  }\n}\n", "nl": "Removes all parsers from this text area."}
+
+"Clears parsers if the parser manager is not null."
+
+2. {"code": "private void assign(HashMap<String,DBIDs> labelMap,String label,DBIDRef id){\n  if (labelMap.containsKey(label)) {\n    DBIDs exist=labelMap.get(label);\n    if (exist instanceof DBID) {\n      ModifiableDBIDs n=DBIDUtil.newHashSet();\n      n.add((DBID)exist);\n      n.add(id);\n      labelMap.put(label,n);\n    }\n else {\n      assert (exist instanceof HashSetModifiableDBIDs);\n      assert (exist.size() > 1);\n      ((ModifiableDBIDs)exist).add(id);\n    }\n  }\n else {\n    labelMap.put(label,DBIDUtil.deref(id));\n  }\n}\n", "nl": "Assigns the specified id to the labelMap according to its label"}
+
+"Assigns a database identifier (DBID) reference to a label in the label map."
+
+3. {"code": "public static Bitmap loadBitmapOptimized(Uri uri,Context context,int limit) throws ImageLoadException {\n  return loadBitmapOptimized(new UriSource(uri,context){\n  }\n,limit);\n}\n", "nl": "Loading bitmap with optimized loaded size less than specific pixels count"}
+"Loads a bitmap from the specified URI with optimization and size limit."
+
+4. {"code": "public int hashCode(){\n  return (int)(ConnectionRelativeTime.class.hashCode() + time);\n}\n", "nl": "Returns a hash code value for this object."}
+"Generates a hash code for the ConnectionRelativeTime object."
+
+5. {"code": "public static void shutdown(){\n  if (instance != null) {\n    instance.save();\n  }\n}\n", "nl": "Saves the configuration file."}
+"Shuts down the system by saving the current state if an instance exists."
+
+6. {"code": "public boolean GE(Word w2){\n  return value.GE(w2.value);\n} "nl": "Greater-than or equal comparison"}
+"Determines if this Word is greater than or equal to another Word."
+
+7. {"code": "public static UnionCoder of(List<Coder<?>> elementCoders){\n  return new UnionCoder(elementCoders);\n}\n", "nl": "Builds a union coder with the given list of element coders.  This list corresponds to a mapping of union tag to Coder.  Union tags start at 0."}
+"Creates a UnionCoder instance with the specified list of element coders."
+
+8. {"code": "public boolean isOnClasspath(String classpath){\n  return this.classpath.equals(classpath);\n}\n", "nl": "Evaluates if the Dependency is targeted for a classpath type."}
+"Determines if the provided classpath matches this object's classpath."
+
+9. {"code": "@Override protected void initData(){\n  Intent intent=new Intent(this,PushMessageService.class);\n  this.startService(intent);\n  this.bindService(intent,this.connection,Context.BIND_AUTO_CREATE);\n}\n", "nl": "Initialize the Activity data"}
+"Initializes data for the activity, starting and binding a service for push messages."
+
+10. {"code": "private boolean doesStoragePortExistsInVArray(StoragePort umfsStoragePort,VirtualArray virtualArray){\n  List<URI> virtualArrayPorts=returnAllPortsInVArray(virtualArray.getId());\n  if (virtualArrayPorts.contains(umfsStoragePort.getId())) {\n    return true;\n  }\n  return false;\n}\n", "nl": "Checks if the given storage port is part of VArray"}
+Checks if the specified storage port exists in the given virtual array."
+
+11. {"code": "public static void startActivity(Context context,String chatId){\n  Intent intent=new Intent(context,SendGroupFile.class);\n  intent.putExtra(EXTRA_CHAT_ID,chatId);\n  context.startActivity(intent);\n}\n", "nl": "Start SendGroupFile activity"}
+"Starts the activity for sending a group file."
+
+12. {"code": "public Index excludedDataCenters(String excludedDataCenters){\n  this.excludedDataCenters=excludedDataCenters;\n  return this;\n}\n", "nl": "Sets the list of excluded data centers."}
+"Sets the excluded data centers and returns the current Index object."
+
+13. {"code": "public static String dec2Bin(int value){\n  String result=\"\";\n  return dec2Bin(value,result);\n}\n", "nl": "Methods converts a decimal number into a binary number as a string"}
+
+"Converts a decimal value to a binary string."
+
+14. {"code": "public int size(){\n  return codon.length;\n}\n", "nl": "Returns the length of the integer codon representation of this grammar."}
+"Returns the size of the codon array."
+
+15. {"code": "public FontSizeLocator(){\n}\n", "nl": "Creates a new instance."}
+initializes a new instance of the FontSizeLocator class.
+
+16. {"code": "public Media createBackgroundMedia(String uri) throws IOException {\n  return impl.createBackgroundMedia(uri);\n}\n", "nl": "Creates an audio media that can be played in the background."}
+Creates a background media with the specified URI."
+
+17. {"code": "public CacheLayer(){\n}\n", "nl": "Construct a default CacheLayer."}
+"Constructs a new CacheLayer object."
+
+18. {"code": "protected Address buildAndroidAddress(JSONObject jResult) throws JSONException {\n  Address gAddress=new Address(mLocale);\n  gAddress.setLatitude(jResult.getDouble(\"lat\"));\n  gAddress.setLongitude(jResult.getDouble(\"lng\"));\n  int addressIndex=0;\n  if (jResult.has(\"streetName\")) {\n    gAddress.setAddressLine(addressIndex++,jResult.getString(\"streetName\"));\n    gAddress.setThoroughfare(jResult.getString(\"streetName\"));\n  }\n  if (jResult.has(\"zipCode\")) {\n    gAddress.setAddressLine(addressIndex++,jResult.getString(\"zipCode\"));\n    gAddress.setPostalCode(jResult.getString(\"zipCode\"));\n  }\n  if (jResult.has(\"city\")) {\n    gAddress.setAddressLine(addressIndex++,jResult.getString(\"city\"));\n    gAddress.setLocality(jResult.getString(\"city\"));\n  }\n  if (jResult.has(\"state\")) {\n    gAddress.setAdminArea(jResult.getString(\"state\"));\n  }\n  if (jResult.has(\"country\")) {\n    gAddress.setAddressLine(addressIndex++,jResult.getString(\"country\"));\n    gAddress.setCountryName(jResult.getString(\"country\"));\n  }\n  if (jResult.has(\"countrycode\"))   gAddress.setCountryCode(jResult.getString(\"countrycode\"));\n  return gAddress;\n}\n", "nl": "Build an Android Address object from the Gisgraphy address in JSON format."}
+
+"Builds an Android address object from the given JSON data."
+
+19. {"code": "public JDBCCategoryDataset(Connection connection,String query) throws SQLException {\n  this(connection);\n  executeQuery(query);\n}\n", "nl": "Creates a new dataset with the given database connection, and executes the supplied query to populate the dataset."}
+
+"Constructs a JDBCCategoryDataset object with the given database connection and executes the specified query.
+
+20. {"code": "@DSGenerator(tool_name=\"Doppelganger\",tool_version=\"2.0\",generated_on=\"2013-12-30 12:34:35.806 -0500\",hash_original_method=\"E14DF72F5869874CC38AD67447F5264E\",hash_generated_method=\"127365361841BB38033FE96228DFD635\") public final Iterator<String> typesIterator(){\n  return mDataTypes != null ? mDataTypes.iterator() : null;\n}\n", "nl": "Return an iterator over the filter's data types."}
+
+Returns an iterator over the data types, if available."
+
+21. {"code": "public URI(final String scheme,final String userinfo,final String host,final int port,final String path,final String query,final String fragment) throws URIException {\n  this(scheme,(host == null) ? null : ((userinfo != null) ? userinfo + '@' : \"\") + host + ((port != -1) ? \":\" + port : \"\"),path,query,fragment);\n}\n", "nl": "Construct a general URI from the given components."}
+
+Constructs a URI object with the specified components."
+
+22. {"code": "public void addUser(User user){\n  users.addElement(user);\n}\n", "nl": "Add a user"}
+"Adds a user to the collection of users."
+
+23. {"code": "public static Video randomVideo(){\n  String id=UUID.randomUUID().toString();\n  String title=\"Video-\" + id;\n  String url=\"http://coursera.org/some/video-\" + id;\n  long duration=60 * (int)Math.rint(Math.random() * 60) * 1000;\n  return new Video(title,url,duration);\n}\n", "nl": "Construct and return a Video object with a rnadom name, url, and duration."}
+
+"Generates a random Video object."
+
+24. {"code": "public void addPostalAddress(PostalAddress postalAddress){\n  getPostalAddresses().add(postalAddress);\n}\n", "nl": "Adds a new contact postal address."}
+
+"Adds a postal address to the list of postal addresses."
+
+25. {"code": "public CaughtExceptionRef newCaughtExceptionRef(){\n  return new JCaughtExceptionRef();\n}\n", "nl": "Constructs a CaughtExceptionRef() grammar chunk."}
+"Creates a new CaughtExceptionRef object."
+
+26. {"code": "@Inline private static void genNullCheck(Assembler asm,GPR objRefReg){\n  asm.emitTEST_Reg_Reg(objRefReg,objRefReg);\n  asm.emitBranchLikelyNextInstruction();\n  ForwardReference fr=asm.forwardJcc(NE);\n  asm.emitINT_Imm(RuntimeEntrypoints.TRAP_NULL_POINTER + RVM_TRAP_BASE);\n  fr.resolve(asm);\n}\n", "nl": "Generate an explicit null check (compare to zero)."}
+
+"Generates assembly code to check for null references."
+
+27. {"code": "public CompositeValidationIssueProcessor(final IValidationIssueProcessor first,final IValidationIssueProcessor... others){\n  processors=Lists.asList(first,others);\n}\n", "nl": "Creates a new composite issue processor with the given sub processor arguments."}
+
+"Constructs a CompositeValidationIssueProcessor with the specified processors."
+
+28. {"code": "private void applyTo(ClassVisitor v,Field f){\n  if (Log.isLoggingOn()) {\n    Log.logLine(String.format(\"Visiting field %s\",f.toGenericString()));\n  }\n  v.visit(f);\n}\n", "nl": "Apply a visitor to a field."}
+
+Applies the visitor to the specified field."
+
+29. {"code": "public static ProjectActionEvent createProjectClosedEvent(ProjectDescriptor project,boolean closingBeforeOpening){\n  return new ProjectActionEvent(project,ProjectAction.CLOSED,closingBeforeOpening);\n}\n", "nl": "Creates a Project Closed Event."}
+
+Creates a project closed event."
+
+30. {"code": "public Enumeration<V> elements(){\n  return new ValueIterator();\n}\n", "nl": "Returns an enumeration of the values in this table."}
+Returns an enumeration of values."
+
+31. {"code": "public Segment segment(long index){\n  assertOpen();\n  if (currentSegment != null && currentSegment.validIndex(index))   return currentSegment;\n  Map.Entry<Long,Segment> segment=segments.floorEntry(index);\n  return segment != null ? segment.getValue() : null;\n}\n", "nl": "Returns the segment for the given index."}
+
+"Returns the segment associated with the specified index."
+
+32. {"code": "private int readInt(InputStream is) throws IOException {\n  return ((is.read() << 24) | (is.read() << 16) | (is.read() << 8)| (is.read()));\n}\n", "nl": "Parses a 32-bit int."}
+"Reads an integer from the input stream."
+
+33. {"code": "private String eventName(String taskType,int taskNum,String evtType){\n  assert nodeId != null;\n  return taskType + \" \" + taskNum+ \" \"+ evtType+ \" \"+ nodeId;\n}\n", "nl": "Generate name that consists of some event information."}
+"Generates an event name based on task type, task number, event type, and node ID."
+
+34. {"code": "public static void init(ActorSystem actorSystem){\n  if (instance == null) {\n    instance=actorSystem.actorOf(Props.create(BatchSigner.class));\n  }\n}\n", "nl": "Initializes the batch signer with the given actor system."}
+
+Initializes the actor system for batch signing, ensuring only one instance is created.
+
+35. {"code": "public RandomDecisionTree(int numFeatures,int maxDepth,int minSamples,TreePruner.PruningMethod pruningMethod,double testProportion){\n  super(maxDepth,minSamples,pruningMethod,testProportion);\n  setRandomFeatureCount(numFeatures);\n}\n", "nl": "Creates a new Random Decision Tree"}
+Initializes a random decision tree with specified parameters
+
+36. {"code": "private void cmd_annotateDifference(){\n  BigDecimal previousValue, actualValue, difference;\n  previousValue=(BigDecimal)v_previousBalance.getValue();\n  actualValue=(BigDecimal)v_ActualBalance.getValue();\n  difference=actualValue.subtract(previousValue);\n  MCashBook cashBook=new MCashBook(p_ctx,p_pos.getC_CashBook_ID(),null);\n  Timestamp today=TimeUtil.getDay(System.currentTimeMillis());\n  MCash cash=MCash.get(p_ctx,cashBook.getC_CashBook_ID(),today,null);\n  if (cash != null && cash.get_ID() != 0 && difference.compareTo(cash.getStatementDifference()) != 0) {\n    MCashLine cl=new MCashLine(cash);\n    cl.setCashType(MCashLine.CASHTYPE_Difference);\n    cl.setAmount(difference);\n    cl.setDescription(Msg.translate(p_pos.getCtx(),\"Cash Scrutiny -> Before: \") + previousValue + \" Now: \"+ actualValue);\n    cl.saveEx();\n  }\n  cash=MCash.get(p_pos.getCtx(),p_pos.getC_CashBook_ID(),today,null);\n  v_previousBalance.setValue(cash.getEndingBalance());\n  v_ActualBalance.setValue(Env.ZERO);\n  v_difference.setValue(Env.ZERO);\n}\n", "nl": "Annotate the difference between previous balance and actual from cash scrutiny in the cash book"}
+This method annotates the difference between previous and actual balances in a cash book
+
+37. {"code": "private boolean isComputeHost(ComputeDescription computeDescription){\n  List<String> supportedChildren=computeDescription.supportedChildren;\n  return supportedChildren != null && supportedChildren.contains(ComputeType.VM_GUEST.name());\n}\n", "nl": "Returns if the given compute description is a compute host or not."}
+determines whether a given compute description represents a compute host
+
+38. {"code": "private void dump(File from,OutputStream out) throws IOException {\n  writeHeader(from,out);\n  FileInputStream in=null;\n  try {\n    in=new FileInputStream(from);\n    int count;\n    while ((count=in.read(buffer)) != -1) {\n      out.write(buffer,0,count);\n    }\n  }\n  finally {\n    closeQuietly(in);\n  }\n}\n", "nl": "Copies from a file to an output stream."}
+dumps the content of a file to an output stream
+
+39. {"code": "public static long lastLocalId(){\n  return cntGen.get();\n}\n", "nl": "Gets last generated local ID."}
+retrieves the last local identifier generated by a counter generator
+
+40. {"code": "void cachePage(long pos,Page page,int memory){\n  if (cache != null) {\n    cache.put(pos,page,memory);\n  }\n}\n", "nl": "Put the page in the cache."}
+ caches a page in memory at a specified position
+
+41. {"code": "@Override public void removeEdge(final InstructionGraphEdge edge){\n  super.removeEdge(edge);\n}\n", "nl": "Removes an instruction edge from the instruction graph."}
+removes an edge from an instruction graph
+
+42. {"code": "public static boolean isValidFolderPath(Path path){\n  if (path == null) {\n    return false;\n  }\n  File f=path.toFile();\n  return path.toString().isEmpty() || (f.isDirectory() && f.canWrite());\n}\n", "nl": "Checks if the parameter path a valid for saving fixed file"}
+checks whether a given path is a valid folder path
+
+
+43. {"code": "@Override public void addDictionaryChunk(List<byte[]> dictionaryChunk){\n  dictionaryChunks.add(dictionaryChunk);\n  if (null == dictionaryByteArrayToSurrogateKeyMap) {\n    createDictionaryByteArrayToSurrogateKeyMap(dictionaryChunk.size());\n  }\n  addDataToDictionaryMap();\n}\n", "nl": "This method will add a new dictionary chunk to existing list of dictionary chunks"}
+This method adds a dictionary chunk to a list of dictionary chunks.
+
+44. {"code": "public void invDct8x8(double[][] input,int[][] output){\n  double[][] temp=new double[NJPEG][NJPEG];\n  double temp1=0.0;\n  int i=0;\n  int j=0;\n  int k=0;\n  for (i=0; i < NJPEG; i++) {\n    for (j=0; j < NJPEG; j++) {\n      temp[i][j]=0.0;\n      for (k=0; k < NJPEG; k++) {\n        temp[i][j]+=input[i][k] * this.C[k][j];\n      }\n    }\n  }\n  for (i=0; i < NJPEG; i++) {\n    for (j=0; j < NJPEG; j++) {\n      temp1=0.0;\n      for (k=0; k < NJPEG; k++) {\n        temp1+=this.Ct[i][k] * temp[k][j];\n      }\n      temp1+=128.0;\n      output[i][j]=ImageUtil.pixelRange(round(temp1));\n    }\n  }\n}\n", "nl": "Perform inverse DCT on the 8x8 matrix"}
+
+performs an inverse DCT operation on an 8x8 block of input data
+
+45. {"code": "public ProductionRule(final String name,final GameData data,final IntegerMap<NamedAttachable> results,final IntegerMap<Resource> costs){\n  super(name,data);\n  m_results=results;\n  m_cost=costs;\n}\n", "nl": "Creates new ProductionRule"}
+
+This constructor initializes a production rule with the provided name, game data, results, and costs
+
+46. {"code": "public GetRequest type(@Nullable String type){\n  if (type == null) {\n    type=\"_all\";\n  }\n  this.type=type;\n  return this;\n}\n", "nl": "Sets the type of the document to fetch."}
+sets the type for a GET request
+
+47. {"code": "private List<String[]> readSentence(BufferedReader aReader) throws IOException {\n  List<String[]> words=new ArrayList<String[]>();\n  String line;\n  boolean beginSentence=true;\n  while ((line=aReader.readLine()) != null) {\n    if (StringUtils.isBlank(line)) {\n      beginSentence=true;\n      break;\n    }\n    if (hasHeader && beginSentence) {\n      beginSentence=false;\n      continue;\n    }\n    String[] fields=line.split(columnSeparator.getValue());\n    if (!hasEmbeddedNamedEntity && fields.length != 2 + FORM) {\n      throw new IOException(String.format(\"Invalid file format. Line needs to have %d %s-separated fields: [%s]\",2 + FORM,columnSeparator.getName(),line));\n    }\n else     if (hasEmbeddedNamedEntity && fields.length != 3 + FORM) {\n      throw new IOException(String.format(\"Invalid file format. Line needs to have %d %s-separated fields: [%s]\",3 + FORM,columnSeparator.getName(),line));\n    }\n    words.add(fields);\n  }\n  if (line == null && words.isEmpty()) {\n    return null;\n  }\n else {\n    return words;\n  }\n}\n", "nl": "Read a single sentence."}
+
+reads sentences from a buffered reader and returns them as a list of arrays of strings, where each array represents a sentence and contains its constituent words. 
+
+48. {"code": "public boolean match(Element e,String pseudoE){\n  return (e instanceof CSSStylableElement) ? ((CSSStylableElement)e).isPseudoInstanceOf(getValue()) : false;\n}\n", "nl": "Tests whether this selector matches the given element."}
+
+checks whether an element matches a given pseudo-element. 
+
+49. {"code": "public static boolean hasInterface(String intf,String cls){\n  try {\n    return hasInterface(Class.forName(intf),Class.forName(cls));\n  }\n catch (  Exception e) {\n    return false;\n  }\n}\n", "nl": "Checks whether the given class implements the given interface."}
+
+checks whether a class implements a specific interface
+
+50. {"code": "public void add(double value){\n  if (count == 0) {\n    count=1;\n    mean=value;\n    min=value;\n    max=value;\n    if (!isFinite(value)) {\n      sumOfSquaresOfDeltas=NaN;\n    }\n  }\n else {\n    count++;\n    if (isFinite(value) && isFinite(mean)) {\n      double delta=value - mean;\n      mean+=delta / count;\n      sumOfSquaresOfDeltas+=delta * (value - mean);\n    }\n else {\n      mean=calculateNewMeanNonFinite(mean,value);\n      sumOfSquaresOfDeltas=NaN;\n    }\n    min=Math.min(min,value);\n    max=Math.max(max,value);\n  }\n}\n", "nl": "Adds the given value to the dataset."}
+
+adds a new value to a statistical accumulator
+
+
+
+
+
